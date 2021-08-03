@@ -18,6 +18,7 @@
 
 | Column      | Type       | Options           |
 | ----------- | ---------- | ----------------- |
+| status_id   | integer    | null: false       |
 | name        | string     | null: false       |
 | partner     | string     |                   |
 | event_date  | date       |                   |
@@ -25,7 +26,6 @@
 | shop        | string     |                   |
 | price       | integer    |                   |
 | memo        | text       |                   |
-| status_id   | integer    | null: false       |
 | user        | references | foreign_key: true |
 
 ### Association
