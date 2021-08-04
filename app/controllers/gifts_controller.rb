@@ -1,4 +1,5 @@
 class GiftsController < ApplicationController
+  before_action :authenticate_user!
   
   def index
     @gifts = Gift.order("created_at DESC")
@@ -11,7 +12,7 @@ class GiftsController < ApplicationController
   def create
     @gift = Gift.create(gift_params)
     if @gift.save
-      redirect_to root_path
+      redirect_to gifts_path
     else
       render :new
     end

@@ -13,11 +13,20 @@
    <header class="header">
       <div class="header__bar row">
         <h1 class="grid-6"><a href="/">GiftLife</a></h1>
-        <% if user_signed_in? %>
+        <% if user_signed_in? && current_page?(gifts_path)%>
           <div class="user_nav grid-6">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%= link_to "ギフト", new_gift_path, class: "post" %>
+            <%= link_to "登録", new_gift_path, class: "post" %>
+            <%= link_to "🌈" %>            
           </div>
+
+        <% elsif user_signed_in? %>
+          <div class="user_nav grid-6">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <%= link_to "ギフト", gifts_path, class: "post" %>
+            <%= link_to "🌈" %>
+          </div>
+
         <% else %>
           <div class="grid-6">
             <%= link_to "ログイン", new_user_session_path, class: "post" %>
