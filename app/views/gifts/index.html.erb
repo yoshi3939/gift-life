@@ -1,0 +1,12 @@
+<div class="contents row">
+  <% @gifts.each do |gift| %>
+    <div class="content_post">
+      <%= image_tag gift.image, class: 'gift-image' if gift.image.attached? %>
+      <div><%= gift.name %></div>
+      <div><%= gift.status.name %></div>
+      <div><%= gift.partner %></div>
+      <div><%= gift.event_date %></div>
+      <div><%= gift.event %></div>
+    </div>
+  <% end %>
+</div>
