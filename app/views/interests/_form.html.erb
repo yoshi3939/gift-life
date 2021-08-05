@@ -1,0 +1,10 @@
+<%= form_with(model: interest, local: true) do |f| %>
+  
+  <%= render 'layouts/error_messages', model: f.object %>
+
+  <%= f.text_field :name, placeholder: "気になるギフト" %>
+  <%= f.file_field :image %>
+  <%= f.text_field :price, placeholder: "金額" %>
+  <%= f.text_area :memo, placeholder: "メモ" %>
+  <%= f.submit "登録" %>
+<% end %>
