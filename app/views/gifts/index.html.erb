@@ -1,11 +1,12 @@
 <div class="contents row">
+  <p>Gift Record</p>
   <% @gifts.each do |gift| %>
     <div class="content_post">
-      <%= image_tag gift.image, class: 'gift-image' if gift.image.attached? %>
+      <%= image_tag gift.image.variant(resize: '300x300'), class: 'gift-image' if gift.image.attached? %>
       <div><%= gift.name %></div>
       <div><%= gift.status.name %></div>
       <div><%= gift.partner %></div>
-      <div><%= gift.event_date %></div>
+      <div><%= gift.event_date %>
       <div><%= gift.event %></div>
     </div>
   <% end %>
