@@ -1,0 +1,14 @@
+<div class="contents row">
+  <p>Gift Record詳細</p>
+    <div class="content_post">
+      <%= image_tag @gift.image.variant(resize: '300x300'), class: 'gift-image' if @gift.image.attached? %>
+      <div><%= @gift.name %></div>
+      <div><%= @gift.status.name %></div>
+      <div><%= @gift.partner %></div>
+      <div><%= @gift.event_date %>
+      <div><%= @gift.event %></div>
+      <div><%= @gift.memo %></div>
+    </div>
+    <%= link_to '編集', edit_gift_path(@gift.id) %>
+    <%= link_to '削除', gift_path(@gift.id), method: :delete %>
+</div>

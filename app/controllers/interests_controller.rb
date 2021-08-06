@@ -13,8 +13,7 @@ class InterestsController < ApplicationController
 
   def create
     @interest = Interest.create(interest_params)
-    if @interest.valid?
-      @interest.save
+    if @interest.save
       redirect_to interests_path
     else
       render :new
