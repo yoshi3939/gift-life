@@ -1,0 +1,9 @@
+<% if current_user.id == interest.user_id %>
+<div class="content_post">
+  <%= link_to interest_path(interest.id) do %>
+    <%= image_tag interest.image.variant(resize: '300x300'), class: 'interest-image' if interest.image.attached? %>
+  <% end %>
+  <div><%= interest.name %></div>
+  <div><%= interest.price %>円</div>
+</div>
+<% end %>

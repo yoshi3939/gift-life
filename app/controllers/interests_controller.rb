@@ -39,6 +39,10 @@ class InterestsController < ApplicationController
     redirect_to interests_path
   end
 
+  def search
+    @interests = Interest.search(params[:keyword]).order("created_at DESC")
+  end
+
   private
 
   def interest_params

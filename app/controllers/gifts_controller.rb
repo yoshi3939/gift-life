@@ -40,6 +40,10 @@ class GiftsController < ApplicationController
     redirect_to gifts_path
   end
 
+  def search
+    @gifts = Gift.search(params[:keyword]).order("event_date DESC")
+  end
+
   private
 
   def gift_params
