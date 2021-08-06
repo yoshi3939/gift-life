@@ -1,13 +1,17 @@
 <div class="contents row">
   <p>Gift Record</p>
   <% @gifts.each do |gift| %>
+    <% if current_user.id == gift.user_id %>
     <div class="content_post">
-      <%= image_tag gift.image.variant(resize: '300x300'), class: 'gift-image' if gift.image.attached? %>
+      <%= link_to gift_path(gift.id) do %>
+        <%= image_tag gift.image.variant(resize: '300x300'), class: 'gift-image' if gift.image.attached? %>
+      <% end %>
       <div><%= gift.name %></div>
       <div><%= gift.status.name %></div>
       <div><%= gift.partner %></div>
       <div><%= gift.event_date %>
       <div><%= gift.event %></div>
     </div>
+    <% end %>
   <% end %>
 </div>
