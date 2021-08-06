@@ -7,5 +7,5 @@
       <div><%= @interest.memo %></div>
     </div>
     <%= link_to '編集', edit_interest_path(@interest.id) %>
-    <%= link_to '削除', interest_path(@interest.id), method: :delete %>
+    <%= link_to '削除', interest_path(@interest.id), method: :delete, data: { confirm: 'この記録を削除しますか？' } %>
 </div>

@@ -10,5 +10,5 @@
       <div><%= @gift.memo %></div>
     </div>
     <%= link_to '編集', edit_gift_path(@gift.id) %>
-    <%= link_to '削除', gift_path(@gift.id), method: :delete %>
+    <%= link_to '削除', gift_path(@gift.id), method: :delete, data: { confirm: 'この記録を削除しますか？' } %>
 </div>
