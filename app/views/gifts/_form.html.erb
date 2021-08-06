@@ -8,7 +8,7 @@
   <%= f.text_field :partner, placeholder: "相手未入力" %>
   <%= f.date_select :event_date, use_month_numbers: true %>
   <%= f.text_field :event, placeholder: "イベント未入力" %>
-  <%= f.text_area :memo, placeholder: "メモ" %>
+  <%= f.text_area :memo, placeholder: "メモ", rows: "10" %>
   <%= f.submit "登録" %>
 
 <% end %>

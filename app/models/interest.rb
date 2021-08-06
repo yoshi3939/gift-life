@@ -4,4 +4,12 @@ class Interest < ApplicationRecord
 
   validates :name, presence: true
 
+  def self.search(search)
+    if search != ""
+      Interest.where('name LIKE(?) OR memo LIKE(?)', "%#{search}%", "%#{search}%")
+    else
+      Interest.all
+    end
+  end
+
 end
