@@ -1,0 +1,8 @@
+<div class="content_post" >
+  <%= image_tag item.image.variant(resize: '500x500'), class: 'item-image' if item.image.attached? %>
+  <div><%= item.name %></div>
+  <div><%= item.price %>円(税込)</div>
+  <div><%= item.memo %></div>
+  <div><%= item.shop %></div>
+  <div><%= item.shopinfo %></div>
+</div>

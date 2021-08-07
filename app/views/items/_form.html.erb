@@ -1,0 +1,12 @@
+<%= form_with(model: item, local: true) do |f| %>
+
+  <%= render 'layouts/error_messages', model: f.object %>
+
+  <%= f.text_field :name, placeholder: "商品名" %>
+  <%= f.file_field :image %>
+  <%= f.text_field :price, placeholder: "金額" %><div></div>
+  <%= f.text_area :memo, placeholder: "メモ", rows: "10" %>
+  <%= f.text_field :shop, placeholder: "店名" %>
+  <%= f.text_area :shopinfo, placeholder: "店情報・URL", rows: "10" %>
+  <%= f.submit "登録" %>
+<% end %>
