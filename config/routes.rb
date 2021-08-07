@@ -6,7 +6,11 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :items, only: :index
+  resources :items, except: :show do
+    collection do
+      get 'search'
+    end
+  end
   resources :interests do
     collection do
       get 'search'
