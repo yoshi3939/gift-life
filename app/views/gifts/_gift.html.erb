@@ -2,11 +2,11 @@
 <div class="content_post">
   <%= link_to gift_path(gift.id) do %>
     <%= image_tag gift.image.variant(resize: '300x300'), class: 'gift-image' if gift.image.attached? %>
+    <div><%= gift.name %></div>  
+    <div><%= gift.status.name %></div>
+    <div><%= gift.partner %></div>
+    <div><%= gift.event_date %>
+    <div><%= gift.event %></div>  
   <% end %>
-  <div><%= gift.name %></div>
-  <div><%= gift.status.name %></div>
-  <div><%= gift.partner %></div>
-  <div><%= gift.event_date %>
-  <div><%= gift.event %></div>
 </div>
 <% end %>
