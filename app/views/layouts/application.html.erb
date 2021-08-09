@@ -20,7 +20,7 @@
             <%= link_to "🌈", interests_path %>            
           </div>
 
-        <% elsif user_signed_in? & current_page?(interests_path)%>
+        <% elsif user_signed_in? && current_page?(interests_path)%>
           <div class="user_nav grid-6">
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
             <%= link_to "登録", new_interest_path, class: "post" %>

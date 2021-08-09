@@ -1,6 +1,10 @@
 <div class ="contents row">
   <p>Premium Gift</p>
 
+<% if user_signed_in? && current_user.admin? %>
+  <%= link_to "商品登録", new_item_path %>
+<% end %>
+
   <%= form_with(url: search_items_path, method: :get, local: true, class: "search-form") do |f| %>
     <%= f.text_field :keyword, placeholder: "ギフトを検索", class: "search-input" %>
     <%= f.submit "検索", class: "search-btn" %>
@@ -8,5 +12,10 @@
 
    <% @items.each do |item| %>
     <%= render partial: "item", locals: { item: item } %>
+
+    <% if user_signed_in? && current_user.admin? %>
+      <%= link_to "編集", edit_item_path(item.id) %>
+      <%= link_to '削除', item_path(item.id), method: :delete, data: { confirm: 'この記録を削除しますか？' } %>
+    <% end %>
    <% end %>
 </div>
