@@ -5,6 +5,7 @@
   <%= f.collection_select(:status_id, Status.all, :id, :name, {}, {class:"status-select"}) %>
   <%= f.text_field :name, placeholder: "ギフトの名称" %>
   <%= f.file_field :image %>
+  <div id="image-list"></div>
   <%= f.text_field :partner, placeholder: "相手未入力" %>
   <%= f.date_select :event_date, use_month_numbers: true %>
   <%= f.text_field :event, placeholder: "イベント未入力" %>
