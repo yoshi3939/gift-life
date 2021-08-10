@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    attributes:
+      gift:
+        name: ギフトの名称
+        status_id: (もらった物 or 贈った物)
+      interest:
+        name: ギフトアイデア
+      item:
+        name: 商品名
+        
