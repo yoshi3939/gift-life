@@ -5,7 +5,7 @@ ja:
         name: ギフトの名称
         status_id: (もらった物 or 贈った物)
       interest:
-        name: ギフトアイデア
+        name: ギフトアイデアの名称
       item:
         name: 商品名
         

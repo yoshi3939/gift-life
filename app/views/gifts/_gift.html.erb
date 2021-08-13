@@ -1,12 +1,18 @@
 <% if current_user.id == gift.user_id %>
 <div class="content_post">
-  <%= link_to gift_path(gift.id) do %>
-    <%= image_tag gift.image.variant(resize: '300x300'), class: 'gift-image' if gift.image.attached? %>
-    <div><%= gift.name %></div>  
-    <div><%= gift.status.name %></div>
-    <div><%= gift.partner %></div>
-    <div><%= gift.event_date %>
-    <div><%= gift.event %></div>  
+  <%= link_to gift_path(gift.id), class: "content_a" do %>
+    <%= image_tag gift.image.variant(resize: '400x400'), class: 'gift-image' if gift.image.attached? %>
+    <div class="side">
+      <% if gift.status_id == 2 %>
+        <div class="status_a"><%= gift.status.name %></div>
+      <% else %>
+        <div class="status_b"><%= gift.status.name %></div>
+      <%end%>
+      <div><strong><%= gift.name %></strong></div>  
+      <div><%= gift.partner %></div>
+      <div><%= gift.event_date.strftime('%Y/%m/%d') %>
+      <div><%= gift.event %></div>  
+    </div>
   <% end %>
 </div>
 <% end %>

@@ -1,5 +1,5 @@
 <div class="contents row">
-  <p>Gift Record</p>
+  <p class="sub_title">ギフト記録</p>
   <%= form_with(url: search_gifts_path, local: true, method: :get, class: "search-form") do |f| %>
     <%= f.text_field :keyword, placeholder: "ギフトを検索", class: "search-input" %>
     <%= f.submit "検索", class: "search-btn" %>

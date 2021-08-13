@@ -12,32 +12,32 @@
   <body>
    <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">GiftLife</a></h1>
+        <h1 class="grid-6 header_a"><a href="/">GiftLife</a></h1>
         <% if user_signed_in? && current_page?(gifts_path)%>
           <div class="user_nav grid-6">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%= link_to "登録", new_gift_path, class: "post" %>
-            <%= link_to "🌈", interests_path %>            
+            <%= link_to "登録", new_gift_path, class: "header_a" %>
+            <%= link_to "アイデア", interests_path, class: "header_a" %>            
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header_a" %>
           </div>
 
         <% elsif user_signed_in? && current_page?(interests_path)%>
           <div class="user_nav grid-6">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%= link_to "登録", new_interest_path, class: "post" %>
-            <%= link_to "🎁", gifts_path %>            
+            <%= link_to "登録", new_interest_path, class: "header_a" %>
+            <%= link_to "ギフト記録", gifts_path, class: "header_a" %>            
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header_a" %>
           </div>
 
         <% elsif user_signed_in? %>
           <div class="user_nav grid-6">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            <%= link_to "ギフト", gifts_path, class: "post" %>
-            <%= link_to "🌈", interests_path %>
+            <%= link_to "ギフト記録", gifts_path, class: "header_a" %>
+            <%= link_to "アイデア", interests_path, class: "header_a" %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header_a" %>
           </div>
 
         <% else %>
           <div class="grid-6">
-            <%= link_to "ログイン", new_user_session_path, class: "post" %>
-            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
+            <%= link_to "ログイン", new_user_session_path, class: "header_a" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "header_a" %>
           </div>
         <% end %>
       </div>

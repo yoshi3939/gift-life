@@ -1,14 +1,18 @@
 <div class="contents row">
-  <p>Gift Record詳細</p>
-    <div class="content_post">
+  <p class="sub_title">ギフト記録詳細</p>
+    <div class="content_post ">
+      <% if @gift.status_id == 2 %>
+        <div class="status_a"><%= @gift.status.name %></div>
+      <% else %>
+        <div class="status_b"><%= @gift.status.name %></div>
+      <%end%>
+      <div><strong><%= @gift.name %></strong></div>
       <%= image_tag @gift.image.variant(resize: '500x500'), class: 'gift-image' if @gift.image.attached? %>
-      <div><%= @gift.name %></div>
-      <div><%= @gift.status.name %></div>
+      <div><%= @gift.event_date.strftime('%Y/%m/%d') %>
       <div><%= @gift.partner %></div>
-      <div><%= @gift.event_date %>
       <div><%= @gift.event %></div>
-      <div><%= @gift.memo %></div>
+      <div><%= safe_join(@gift.memo.split("\n"),tag(:br)) %></div>
     </div>
-    <%= link_to '編集', edit_gift_path(@gift.id) %>
-    <%= link_to '削除', gift_path(@gift.id), method: :delete, data: { confirm: 'この記録を削除しますか？' } %>
+    <%= link_to '編集', edit_gift_path(@gift.id), class: "content_a btn_a" %>
+    <%= link_to '削除', gift_path(@gift.id), method: :delete, class: "content_a btn_a", data: { confirm: 'この記録を削除しますか？' } %>
 </div>

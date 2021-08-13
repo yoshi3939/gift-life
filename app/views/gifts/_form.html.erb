@@ -7,7 +7,7 @@
   <%= f.file_field :image %>
   <div id="image-list"></div>
   <%= f.text_field :partner, placeholder: "相手未入力" %>
-  <%= f.date_select :event_date, use_month_numbers: true %>
+  <%= f.date_field :event_date, use_month_numbers: true %>
   <%= f.text_field :event, placeholder: "イベント未入力" %>
   <%= f.text_area :memo, placeholder: "メモ", rows: "10" %>
   <%= f.submit "登録" %>
