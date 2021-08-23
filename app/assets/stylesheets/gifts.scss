@@ -327,9 +327,6 @@ ul li {
   width: 39.86667%;
 }
 
-.row .grid-6 {
-  width: 48.2%;
-}
 
 .row .grid-7 {
   width: 56.53333%;
@@ -487,7 +484,7 @@ a {
 .header_a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-image: -webkit-linear-gradient(left, #f69, #fc0, #3c3, #09f, #96f);
+  background-image: -webkit-linear-gradient(left, #f69, #fc0, #3c3);
 }
 
 .bold {
@@ -558,7 +555,9 @@ header.header div.header__bar.row h1.grid-6 {
 
 header.header div.header__bar.row div.grid-6 {
   font-size: 17px;
-  margin-top: 20px;
+  margin: 20px 0 0 150px;
+  border-collapse: separate;
+  border-spacing: 20px 0;
 }
 
 .form {
@@ -736,7 +735,6 @@ footer p {
   background-color: #062af5;
 }
 
-
 .status_a {
   display: inline-block;
   background-color: rgb(6, 175, 6);
@@ -768,4 +766,20 @@ footer p {
 .line_spase {
   text-align: center;
   margin-bottom: 30px;
+}
+
+.header_a {
+  display: table-cell;
+}
+
+.date_form {
+  width: 180px;
+}
+
+.status-select {
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  border-radius: 5px;
+  font-family: "游ゴシック", "YuGothic";
 }

@@ -10,7 +10,7 @@
       <%end%>
       <div><strong><%= gift.name %></strong></div>  
       <div><%= gift.partner %></div>
-      <div><%= gift.event_date.strftime('%Y/%m/%d') %>
+      <div><%= gift.event_date&.strftime('%Y/%m/%d') %>
       <div><%= gift.event %></div>  
     </div>
   <% end %>
