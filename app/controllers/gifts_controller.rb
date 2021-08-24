@@ -4,7 +4,7 @@ class GiftsController < ApplicationController
   before_action :correct_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @gifts = Gift.order("event_date DESC")
+    @gifts = Gift.order('event_date DESC')
   end
 
   def new
@@ -30,7 +30,7 @@ class GiftsController < ApplicationController
   def update
     if @gift.update(gift_params)
       redirect_to gift_path(@gift.id)
-    else 
+    else
       render :edit
     end
   end
@@ -41,7 +41,7 @@ class GiftsController < ApplicationController
   end
 
   def search
-    @gifts = Gift.search(params[:keyword]).order("event_date DESC")
+    @gifts = Gift.search(params[:keyword]).order('event_date DESC')
   end
 
   private
@@ -55,9 +55,6 @@ class GiftsController < ApplicationController
   end
 
   def correct_user
-    unless current_user.id == @gift.user_id
-      redirect_to gifts_path
-    end
+    redirect_to gifts_path unless current_user.id == @gift.user_id
   end
-
 end

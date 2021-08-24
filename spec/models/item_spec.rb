@@ -16,7 +16,7 @@ RSpec.describe Item, type: :model do
       it 'nameが空だと登録できない' do
         @item.name = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("商品名を入力してください")
+        expect(@item.errors.full_messages).to include('商品名を入力してください')
       end
       it 'ユーザー情報がない場合は登録できない' do
         @item.user = nil

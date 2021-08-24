@@ -16,7 +16,7 @@ RSpec.describe Interest, type: :model do
       it 'nameが空だと登録できない' do
         @interest.name = ''
         @interest.valid?
-        expect(@interest.errors.full_messages).to include("ギフトアイデアを入力してください")
+        expect(@interest.errors.full_messages).to include('ギフトアイデアを入力してください')
       end
       it 'ユーザー情報がない場合は登録できない' do
         @interest.user = nil

@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:edit, :update, :destroy]
 
   def index
-    @items = Item.order("created_at DESC")
+    @items = Item.order('created_at DESC')
   end
 
   def new
@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
   def update
     if @item.update(item_params)
       redirect_to items_path
-    else 
+    else
       render :edit
     end
   end
@@ -37,7 +37,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    @items = Item.search(params[:keyword]).order("created_at DESC")
+    @items = Item.search(params[:keyword]).order('created_at DESC')
   end
 
   private
@@ -51,9 +51,6 @@ class ItemsController < ApplicationController
   end
 
   def if_not_admin
-    unless current_user.admin?
-      redirect_to root_path
-    end
+    redirect_to root_path unless current_user.admin?
   end
-
 end

@@ -16,12 +16,12 @@ RSpec.describe Gift, type: :model do
       it 'status_idが空だと登録できない' do
         @gift.status_id = 1
         @gift.valid?
-        expect(@gift.errors.full_messages).to include("(もらった物 or 贈った物)を選択してください")
+        expect(@gift.errors.full_messages).to include('(もらった物 or 贈った物)を選択してください')
       end
       it 'nameが空だと登録できない' do
         @gift.name = ''
         @gift.valid?
-        expect(@gift.errors.full_messages).to include("ギフトの名称を入力してください")
+        expect(@gift.errors.full_messages).to include('ギフトの名称を入力してください')
       end
       it 'ユーザー情報がない場合は登録できない' do
         @gift.user = nil

@@ -8,5 +8,4 @@ class User < ApplicationRecord
   has_many :items
 
   validates :password, format: { with: /\A[a-zA-Z0-9]+\z/, message: 'は半角英数字のみ入力可です' }
-
 end

@@ -21,7 +21,7 @@ RSpec.describe User, type: :model do
       it 'emailが空だと登録できない' do
         @user.email = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("メールアドレスを入力してください")
+        expect(@user.errors.full_messages).to include('メールアドレスを入力してください')
       end
       it '重複したemailが存在する場合登録できない' do
         @user.save
@@ -56,7 +56,7 @@ RSpec.describe User, type: :model do
         @user.password = 'aaa111'
         @user.password_confirmation = 'aaa112'
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
     end
   end

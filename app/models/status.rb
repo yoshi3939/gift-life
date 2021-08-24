@@ -5,7 +5,6 @@ class Status < ActiveHash::Base
     { id: 3, name: '贈った物' }
   ]
 
-include ActiveHash::Associations
-has_many :gifts
-
+  include ActiveHash::Associations
+  has_many :gifts
 end

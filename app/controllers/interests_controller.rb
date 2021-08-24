@@ -4,7 +4,7 @@ class InterestsController < ApplicationController
   before_action :correct_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @interests = Interest.order("created_at DESC")
+    @interests = Interest.order('created_at DESC')
   end
 
   def new
@@ -29,7 +29,7 @@ class InterestsController < ApplicationController
   def update
     if @interest.update(interest_params)
       redirect_to interest_path(@interest.id)
-    else 
+    else
       render :edit
     end
   end
@@ -40,7 +40,7 @@ class InterestsController < ApplicationController
   end
 
   def search
-    @interests = Interest.search(params[:keyword]).order("created_at DESC")
+    @interests = Interest.search(params[:keyword]).order('created_at DESC')
   end
 
   private
@@ -54,9 +54,6 @@ class InterestsController < ApplicationController
   end
 
   def correct_user
-    unless current_user.id == @interest.user_id
-      redirect_to interests_path
-    end
+    redirect_to interests_path unless current_user.id == @interest.user_id
   end
-
 end
