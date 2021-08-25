@@ -1,6 +1,6 @@
 <% if current_user.id == interest.user_id %>
 <div class="content_post">
-  <%= link_to interest_path(interest.id), class: "content_a" do %>
+  <%= link_to interest_path(interest.id), class: "sub" do %>
     <%= image_tag interest.image.variant(resize: '400x400'), class: 'interest-image' if interest.image.attached? %>
     <div><strong><%= interest.name %></strong></div>
     <div><%= safe_join(interest.memo.split("\n"),tag(:br)) %></div>

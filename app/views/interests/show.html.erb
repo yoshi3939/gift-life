@@ -4,7 +4,7 @@
       <%= image_tag @interest.image.variant(resize: '500x500'), class: 'interest-image' if @interest.image.attached? %>
       <div><strong><%= @interest.name %></strong></div>
       <div><%= safe_join(@interest.memo.split("\n"),tag(:br)) %></div>
-    <%= link_to '編集', edit_interest_path(@interest.id), class: "content_a btn_a" %>
-    <%= link_to '削除', interest_path(@interest.id), method: :delete, class: "content_a btn_a", data: { confirm: 'この記録を削除しますか？' } %>
+    <%= link_to '編集', edit_interest_path(@interest.id), class: "sub btn_a" %>
+    <%= link_to '削除', interest_path(@interest.id), method: :delete, class: "sub btn_a", data: { confirm: 'この記録を削除しますか？' } %>
     </div>
 </div>

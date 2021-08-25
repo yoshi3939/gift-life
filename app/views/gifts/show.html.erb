@@ -13,6 +13,6 @@
       <div><%= @gift.event %></div>
       <div><%= safe_join(@gift.memo.split("\n"),tag(:br)) %></div>
     </div>
-    <%= link_to '編集', edit_gift_path(@gift.id), class: "content_a btn_a" %>
-    <%= link_to '削除', gift_path(@gift.id), method: :delete, class: "content_a btn_a", data: { confirm: 'この記録を削除しますか？' } %>
+    <%= link_to '編集', edit_gift_path(@gift.id), class: "sub btn_a" %>
+    <%= link_to '削除', gift_path(@gift.id), method: :delete, class: "sub btn_a", data: { confirm: 'この記録を削除しますか？' } %>
 </div>

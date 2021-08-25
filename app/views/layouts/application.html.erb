@@ -11,33 +11,33 @@
 
   <body>
    <header class="header">
-      <div class="header__bar row">
-        <h1 class="grid-6 header_a"><a href="/">GiftLife</a></h1>
+      <div class="row">
+        <h1 class="grid nav"><a href="/">GiftLife</a></h1>
         <% if user_signed_in? && current_page?(gifts_path)%>
-          <div class="user_nav grid-6">
-            <%= link_to "登録", new_gift_path, class: "header_a" %>
-            <%= link_to "アイデア", interests_path, class: "header_a" %>            
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header_a" %>
+          <div class="grid">
+            <%= link_to "登録", new_gift_path, class: "nav" %>
+            <%= link_to "アイデア", interests_path, class: "nav" %>            
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav" %>
           </div>
 
         <% elsif user_signed_in? && current_page?(interests_path)%>
-          <div class="user_nav grid-6">
-            <%= link_to "登録", new_interest_path, class: "header_a" %>
-            <%= link_to "ギフト記録", gifts_path, class: "header_a" %>            
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header_a" %>
+          <div class="grid">
+            <%= link_to "登録", new_interest_path, class: "nav" %>
+            <%= link_to "ギフト記録", gifts_path, class: "nav" %>            
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav" %>
           </div>
 
         <% elsif user_signed_in? %>
-          <div class="user_nav grid-6">
-            <%= link_to "ギフト記録", gifts_path, class: "header_a" %>
-            <%= link_to "アイデア", interests_path, class: "header_a" %>
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header_a" %>
+          <div class="grid">
+            <%= link_to "ギフト記録", gifts_path, class: "nav" %>
+            <%= link_to "アイデア", interests_path, class: "nav" %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav" %>
           </div>
 
         <% else %>
-          <div class="grid-6">
-            <%= link_to "ログイン", new_user_session_path, class: "header_a" %>
-            <%= link_to "新規登録", new_user_registration_path, class: "header_a" %>
+          <div class="grid">
+            <%= link_to "ログイン", new_user_session_path, class: "nav" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "nav" %>
           </div>
         <% end %>
       </div>

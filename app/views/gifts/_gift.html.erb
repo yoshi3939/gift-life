@@ -1,6 +1,6 @@
 <% if current_user.id == gift.user_id %>
 <div class="content_post">
-  <%= link_to gift_path(gift.id), class: "content_a" do %>
+  <%= link_to gift_path(gift.id), class: "sub" do %>
     <%= image_tag gift.image.variant(resize: '400x400'), class: 'gift-image' if gift.image.attached? %>
     <div class="side">
       <% if gift.status_id == 2 %>
