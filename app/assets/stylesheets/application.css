@@ -28,21 +28,6 @@ body {
   margin-right: 0.9%;
 }
 
-@media only screen and (max-width: 40em) {
-
-  .row {
-    width: 100%;
-    padding: 0 20px;
-  }
-
-  .row .grid {
-    float: none;
-    width: 100%;
-    margin: 0;
-    position: static;
-  }
-}
-
 img {
   border: 0;
   max-width: 100%;
