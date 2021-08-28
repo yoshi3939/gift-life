@@ -4,7 +4,7 @@ class InterestsController < ApplicationController
   before_action :correct_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @interests = Interest.order('created_at DESC')
+    @interests = Interest.includes(:user).order('created_at DESC')
   end
 
   def new
