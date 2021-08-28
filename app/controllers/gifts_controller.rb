@@ -4,7 +4,7 @@ class GiftsController < ApplicationController
   before_action :correct_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @gifts = Gift.order('event_date DESC')
+    @gifts = Gift.includes(:user).order('event_date DESC')
   end
 
   def new
