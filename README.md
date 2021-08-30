@@ -58,6 +58,31 @@ ruby 2.6.5 / Ruby on Rails 6.0.0 / JavaScript /mysql2 0.4.4 / GitHub / AWS / Her
 # データベース設計	
 [![Image from Gyazo](https://i.gyazo.com/21b4f39bd6d3d28e9be13323d8bfaa3a.png)](https://gyazo.com/21b4f39bd6d3d28e9be13323d8bfaa3a)
 
+# GIF
+- ログイン前から、トップページのお薦めギフトページが参照できる動画
+https://i.gyazo.com/52f716a479b392f98a9d1802e9b8fdea.gif
+
+- ログイン後、トップページ（お薦めギフトページ）、ギフト記録ページ、ギフトアイデアページへ遷移可能になる動画
+https://i.gyazo.com/a7f28d9d095c57ac766b736cd927f72e.gif
+
+- ギフト記録の登録フォームから情報を記載して登録ボタンを押すと、ギフト記録一覧に追加される動画
+https://i.gyazo.com/b26278532fe58173316ba81aca585750.gif
+
+- ギフト記録ページから登録フォームに遷移し、必要事項を記載しないと、日本語でエラーメッセージが出る動画
+https://i.gyazo.com/37b9dfb5ff31497347ccd396ce48168e.gif
+
+- ギフト記録ページから、それぞれの記録情報をクリックすると、ギフト記録詳細ページに遷移し、編集、削除が可能になる動画
+https://i.gyazo.com/9614a68e82590265046cdda6d44f633a.gif
+
+- お薦めギフトページにて、商品検索機能の動画
+https://i.gyazo.com/89d789b1c5fa1312808f8b287caa46a8.gif
+
+- 管理者アカウントでログインすると、トップページ（お薦めギフトページ）に、商品登録・編集・削除ボタンが現れ、それぞれの機能が可能になる動画
+https://i.gyazo.com/bbd2ab797b63616a63925f3b313413bb.gif
+
+- ユーザー新規登録に対するテスト結果の動画
+https://i.gyazo.com/4c9b0505e95b340d68d35a5a02bd4256.gif
+
 
 # テーブル設計
 
